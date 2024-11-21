@@ -1,5 +1,5 @@
 from flask import Flask
-from app.routes import upload, predict, health
+from app.routes import upload
 
 def create_app():
     app = Flask(__name__)
@@ -9,7 +9,5 @@ def create_app():
     
     # 註冊路由
     app.register_blueprint(upload.bp)
-    app.register_blueprint(predict.bp)
-    app.register_blueprint(health.bp)
 
     return app
